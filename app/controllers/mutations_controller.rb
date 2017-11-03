@@ -69,6 +69,6 @@ class MutationsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def mutation_params
-      params.fetch(:mutation, {})
+      params.require(:mutation).permit(:type, :abs_amount, :account_id, :datetime)
     end
 end

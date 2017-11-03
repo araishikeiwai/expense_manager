@@ -3,5 +3,5 @@ class Account < ActiveRecord::Base
   has_many :credits
   has_many :debits
 
-  validates_presence_of :form, :name, :currency
+  validates_presence_of :name, :currency
 end
